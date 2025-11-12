@@ -16,7 +16,7 @@ function ContactPage() {
             return;
         }
         
-        console.log(formInput);
+        //console.log(formInput);
     }
     return (
         <div className="p-4">

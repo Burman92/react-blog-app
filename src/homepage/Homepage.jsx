@@ -12,7 +12,7 @@ function Homepage() {
             .catch(e => console.error("error fetching: " + e))
         }, []);
 
-    console.log(blogPost);
+    //console.log(blogPost);
     return (
         <div className="flex flex-col gap-y-2">
             <Link to="/posts/1">Post #1</Link>
