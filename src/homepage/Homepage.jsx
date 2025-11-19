@@ -8,8 +8,8 @@ function Homepage() {
     const loggedInUser = `Welcome ${username}, Please navigate to the Blog Post to start Blogging`
     const loggedIn = username ? loggedInUser : loggedOutUser; 
     return (
-        <div className="flex flex-col gap-y-2">
-            <h1>
+        <div className="flex flex-col items-center justify-center min-h-screen gap-y-4 bg-gray-50">
+            <h1 className="text-2xl font-semibold text-gray-800 text-center bg-white shadow-md p-6 rounded-xl max-w-xl">
                 {loggedIn}
             </h1>
         </div>
