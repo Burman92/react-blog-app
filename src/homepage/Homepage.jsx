@@ -1,23 +1,17 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router";
-import axios from "axios";
+import React from "react";
+import { useUsername } from "../authWrapper/AuthContext";
+
 
 function Homepage() {
-    const [blogPost, setblogPost] = useState("");
-
-
-    useEffect(() => {
-            axios.get(`https://jsonplaceholder.typicode.com/posts`)
-            .then(res => setblogPost(res.data))
-            .catch(e => console.error("error fetching: " + e))
-        }, []);
-
-    //console.log(blogPost);
+    const username = useUsername();
+    const loggedOutUser = "Welcome, Please login to post in the Blog Application. You may still view posts on the Blog Post tab but you cannot post unless you are logged in."
+    const loggedInUser = `Welcome ${username}, Please navigate to the Blog Post to start Blogging`
+    const loggedIn = username ? loggedInUser : loggedOutUser; 
     return (
         <div className="flex flex-col gap-y-2">
-            <Link to="/posts/1">Post #1</Link>
-            <Link to="/posts/2">Post #2</Link>
-            <Link to="/posts/3">Post #3</Link>
+            <h1>
+                {loggedIn}
+            </h1>
         </div>
         );
     }
