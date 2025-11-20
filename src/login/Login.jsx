@@ -5,7 +5,8 @@ import { useNavigate } from 'react-router';
 function Login() {
     const navigate = useNavigate();
     const { login } = useAuth();
-
+    const userLogin = 'test';
+    const userPassword = '123';
 
     const [userData, setUserData] = useState({
         username: "",
@@ -14,10 +15,19 @@ function Login() {
 
     const onSubmit = (e) => {
         e.preventDefault();
+
         
-        login(userData.username, userData.password);
+        if (userData.username === userLogin && userData.password === userPassword) {
+            login(userData.username, userData.password);
+        } else {
+            alert("Invalid Username or Password.");
+            return;
+        }
+        
         navigate('/posts');
     }
+
+
     return (
         <div className = 'flex justify-center items-start min-h-screen bg-gray-100 px-4 pt-20'>
             <div className  = 'w-full max-w-lg bg-white rounded-2xl shadow-md border border-gray-200 p-8'>
