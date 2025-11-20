@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import { useAuth, useUsername } from '../authWrapper/AuthContext';
+import { useAuth } from '../authWrapper/AuthContext';
 import { useNavigate } from 'react-router';
 
 function Login() {
     const navigate = useNavigate();
     const { login } = useAuth();
-    const username = useUsername();
+
 
     const [userData, setUserData] = useState({
         username: "",

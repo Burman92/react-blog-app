@@ -10,7 +10,7 @@ function PostList() {
             axios.get(`https://jsonplaceholder.typicode.com/posts`)
             .then(res => setblogPost(res.data))
             .catch(e => console.error("error fetching: " + e))
-        }, []);
+    }, []);
 
     return (
         <div className="flex flex-col min-h-screen bg-gray-50">

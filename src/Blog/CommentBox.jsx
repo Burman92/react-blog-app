@@ -98,7 +98,7 @@ function CommentBox({ initialComments = [] }) {
           <h3 className="font-bold text-gray-800 mb-2">Existing Comments:</h3>
           <ul className="list-disc list-inside space-y-1 text-gray-800">
             {commentList.map((c, index) => (
-              <li key={c.id }>
+              <li key={ index }>
                 <IndividualComment name={c.name} content={c.content} />
               </li>
             ))}

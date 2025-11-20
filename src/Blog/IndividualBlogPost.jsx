@@ -1,7 +1,6 @@
 import React from "react";
 import Body from "./Body";
 
-import { ThemeProvider } from '../ThemeContext';
 
 function IndividualBlogPost() {
     return (

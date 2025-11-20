@@ -1,10 +1,8 @@
 import { useState, useEffect } from "react";
-import { useTheme } from "../ThemeContext";
 import CommentBox from "./CommentBox";
 import Content from "./Content";
 import { useParams } from "react-router";
 import axios from "axios";
-import IndividualComment from "./IndividualComment";
 
 function Body () {
     const params = useParams();
